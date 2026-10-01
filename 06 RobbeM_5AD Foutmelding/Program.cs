@@ -24,7 +24,7 @@ namespace _06_RobbeM_5AD_Foutmelding
                 // scherm leegmaken
                 Console.Clear();
                 // Stap 2: toon tekst
-                Console.WriteLine("Getal ontvangen.");
+                Console.WriteLine($"U gav het volgende is: {_getal.ToString()}.");
 
             }
             catch
