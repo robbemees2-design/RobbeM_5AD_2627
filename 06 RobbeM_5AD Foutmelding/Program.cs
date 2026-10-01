@@ -20,7 +20,7 @@ namespace _06_RobbeM_5AD_Foutmelding
             {
                 // Stap 1: vraag getal +opslaan
                 Console.WriteLine("geef een natuurlijk getal in.");
-                int.Parse(Console.ReadLine());
+                _getal = int.Parse(Console.ReadLine());
             }
             catch
             {
