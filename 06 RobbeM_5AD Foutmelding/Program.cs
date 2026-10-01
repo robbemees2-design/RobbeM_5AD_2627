@@ -15,10 +15,10 @@ namespace _06_RobbeM_5AD_Foutmelding
             // 01/10/2026
             // velden
             int _getal = 0;
-            // programma
-            // Stap 1: vraag getal +opslaan
+            // programma 
             try
             {
+                // Stap 1: vraag getal +opslaan
                 Console.WriteLine("geef een natuurlijk getal in.");
                 int.Parse(Console.ReadLine());
             }
