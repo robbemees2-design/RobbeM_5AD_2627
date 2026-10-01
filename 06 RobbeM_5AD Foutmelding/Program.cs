@@ -32,7 +32,7 @@ namespace _06_RobbeM_5AD_Foutmelding
                 // scherm leegmaken
                 Console.Clear();
                 // foutmelding
-                Console.WriteLine("Uw moet een hetal in geven geen tekst.");
+                Console.WriteLine("Uw moet een getal in geven geen tekst.");
             }
             
 
