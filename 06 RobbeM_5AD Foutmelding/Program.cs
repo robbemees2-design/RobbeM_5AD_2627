@@ -21,6 +21,11 @@ namespace _06_RobbeM_5AD_Foutmelding
                 // Stap 1: vraag getal +opslaan
                 Console.WriteLine("geef een natuurlijk getal in.");
                 _getal = int.Parse(Console.ReadLine());
+                // scherm leegmaken
+                Console.Clear();
+                // Stap 2: toon tekst
+                Console.WriteLine("Getal ontvangen.");
+
             }
             catch
             {
