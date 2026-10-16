@@ -18,7 +18,7 @@ namespace _13_RobbeM_5AD_project_Hallo
             String _naam = null;
             //Programma
             // intro
-            Console.WriteLine("Welkom op dit programma\nDruk op een toets om verder te gaan");
+            Console.WriteLine("Welkom op dit programma.\nDruk op een toets om verder te gaan.");
             Console.ReadKey();
             // scherm leegmaken
             Console.Clear();
@@ -27,13 +27,13 @@ namespace _13_RobbeM_5AD_project_Hallo
                 // Scherm leegmaken
                 Console.Clear();
                 //Stap1: toon keuze menu(Toon hallo wereld, Hallo + naam, afskuiten)
-                Console.WriteLine("Kies 1 van de onderstaande ofeningen");
+                Console.WriteLine("Kies 1 van de onderstaande ofeningen.");
                 Console.WriteLine("  1)Toon Hallo Wereld\n  2)Toon Hallo + uw naam\n  3)Afsluiten");
                 try
                 {
                     // vraag Keuze +  opslaan
                     _keuze = Byte.Parse(Console.ReadLine());
-                    Console.WriteLine("Druk op een toets om verder te gaan");
+                    Console.WriteLine("Druk op een toets om verder te gaan.");
                     Console.ReadKey();
                     //scherm leegmaken
                     Console.Clear();
@@ -43,7 +43,7 @@ namespace _13_RobbeM_5AD_project_Hallo
                     {
                         //        Stap3: Toon tekst Hallo Wereld
                         Console.WriteLine("Hallo Wereld.");
-                        Console.WriteLine("Druk op een toets om terug tekeren naar het keuzemenu");
+                        Console.WriteLine("Druk op een toets om terug tekeren naar het keuzemenu.");
                         Console.ReadKey();
                     }
                     //    Als2               
@@ -58,21 +58,21 @@ namespace _13_RobbeM_5AD_project_Hallo
                         Console.Clear();
                         //Stap5: toon tekst Hallo + naam
                         Console.WriteLine($"Hallo {_naam}.");
-                        Console.WriteLine("Druk op een toets om terug tekeren naar het keuzemenu");
+                        Console.WriteLine("Druk op een toets om terug tekeren naar het keuzemenu.");
                         Console.ReadKey();
                     }
                     //    Als3: afsluiten
                     else if (_keuze == 3)
                     {
                         Console.WriteLine("Tot Ziens");
-                        Console.WriteLine("Druk op een toets om terug tekeren naar het keuzemenu");
+                        Console.WriteLine("Druk op een toets om terug tekeren naar het keuzemenu.");
                         Console.ReadKey();
                     }
                     // als niet 3 keer terug naar stap 1
                     else
                     {
                         // foutmeldeing
-                        Console.WriteLine("u gaf een fout getal in\n!!!IDIOOT!!!");
+                        Console.WriteLine("U gaf een fout getal in\n!!!IDIOOT!!!");
                         Console.WriteLine("Druk op een toets om terug tekeren naar het keuzemenu");
                         Console.ReadKey();
 
