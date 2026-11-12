@@ -33,6 +33,29 @@ namespace _24_RobbeM_dateTimeFuncties
             // uur van huidige datum
             _datum = DateTime.Now;
             Console.WriteLine($" het uur van vandaag: {_datum.Hour.ToString()}\n");
+            // Dag van de week
+            Console.WriteLine($"Het uur van vandaag: {_datum.DayOfWeek.ToString()}\n");
+            int uitkomst = Convert.ToInt32(_datum.DayOfWeek);
+            Console.WriteLine(uitkomst.ToString());
+            // Toevoegen van jaren, maanden, dagen, uren, minuten, seconden ...
+            _datum = _datum.AddYears(1).AddDays(4).AddHours(2);
+            Console.WriteLine($"Het uur van vandaag: {_datum.ToString()}\n");
+            _datum = _datum.AddYears(-1).AddDays(-4).AddHours(-2);
+            Console.WriteLine($"Het uur van vandaag: {_datum.ToString()}\n");
+            // De verschillende ToStrings mogelijkheden
+            Console.WriteLine("Hier zijn de verschillende tostring opties:");
+            Console.WriteLine($"De normale ToString: {_datum.ToString()}\n");
+            Console.WriteLine($"De Long Date: {_datum.ToLongDateString()}\n");
+            Console.WriteLine($"De Long Time: {_datum.ToLongTimeString()}\n");
+            Console.WriteLine($"De Short Date: {_datum.ToShortDateString()}\n");
+            Console.WriteLine($"De Short Time: {_datum.ToShortTimeString()}\n");
+            // Rekenen met datums
+            DateTime datum2 = DateTime.Now.AddYears(3);
+            // Rechtstreeks rekenen met datums gaat niet!!
+            //_datum = datum2 - _datum;
+            // Je moet variabelen gebruiken van de datatype TimeSpan.
+            TimeSpan verschil = datum2 - _datum;
+            Console.WriteLine($"{verschil.ToString()}\n");
         }
     }
 }
