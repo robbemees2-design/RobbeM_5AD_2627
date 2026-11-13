@@ -37,11 +37,13 @@ namespace _24_RobbeM_dateTimeFuncties
             Console.WriteLine($"Het uur van vandaag: {_datum.DayOfWeek.ToString()}\n");
             int uitkomst = Convert.ToInt32(_datum.DayOfWeek);
             Console.WriteLine(uitkomst.ToString());
+
             // Toevoegen van jaren, maanden, dagen, uren, minuten, seconden ...
             _datum = _datum.AddYears(1).AddDays(4).AddHours(2);
             Console.WriteLine($"Het uur van vandaag: {_datum.ToString()}\n");
             _datum = _datum.AddYears(-1).AddDays(-4).AddHours(-2);
             Console.WriteLine($"Het uur van vandaag: {_datum.ToString()}\n");
+
             // De verschillende ToStrings mogelijkheden
             Console.WriteLine("Hier zijn de verschillende tostring opties:");
             Console.WriteLine($"De normale ToString: {_datum.ToString()}\n");
@@ -56,6 +58,44 @@ namespace _24_RobbeM_dateTimeFuncties
             // Je moet variabelen gebruiken van de datatype TimeSpan.
             TimeSpan verschil = datum2 - _datum;
             Console.WriteLine($"{verschil.ToString()}\n");
+            double aantalDagen = verschil.Days;
+            double aantalDagen2 = verschil.TotalDays;
+            Console.WriteLine($"Days = {aantalDagen} en totaldays = {aantalDagen2}\n");
+
+            double aantalUren = verschil.Hours;
+            double aantalUren2 = verschil.TotalHours;
+            Console.WriteLine($"Days = {aantalUren} en totaldays = {aantalUren2}\n");
+
+            Console.WriteLine("\nDruk op enter om verder te gaan");
+            Console.ReadKey();
+
+            //scherm leegmaken
+            Console.Clear();
+            // laat de gebruiker de datum ingeven
+            Console.WriteLine("\n Geef een  datum in (dd/mm/jjjj)");
+            String datum = Console.ReadLine();
+
+            //laat de gebruiker een uur ingeven
+            Console.WriteLine("\n Geef een bepaald tijdstip van deze dag(hh:mm)");
+            String tijdstip = Console.ReadLine();
+
+            try
+            {
+                DateTime ingegevenDatum = DateTime.Parse($"{datum} {tijdstip}");
+
+                //bevesteging
+                Console.WriteLine("Gelukt");
+                Console.WriteLine("\nDruk op enter om verder te gaan");
+                Console.ReadLine();
+
+            }
+            catch
+            {
+                //foutmelding
+                Console.WriteLine("Er ging iets fout");
+                Console.WriteLine("\nDruk op enter om verder te gaan");
+                Console.ReadLine();
+            }
         }
     }
 }
