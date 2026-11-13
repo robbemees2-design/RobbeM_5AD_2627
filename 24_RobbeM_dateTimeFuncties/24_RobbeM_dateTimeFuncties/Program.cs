@@ -82,9 +82,34 @@ namespace _24_RobbeM_dateTimeFuncties
             try
             {
                 DateTime ingegevenDatum = DateTime.Parse($"{datum} {tijdstip}");
+                DateTime enkelDatum = DateTime.Parse($"{datum}");
+                DateTime enkelUur = DateTime.Parse($"{tijdstip}");
+
+                Console.WriteLine($"Hier is de volledige datum en tijd {ingegevenDatum.ToString()}");
+                Console.WriteLine($"Hier is enkel de datum {enkelDatum.ToString()}");
+                Console.WriteLine($"Hier is enkel de tijd{enkelUur.ToString()}");
 
                 //bevesteging
                 Console.WriteLine("Gelukt");
+                Console.WriteLine("\nDruk op enter om verder te gaan");
+                Console.ReadLine();
+
+                //scherm leegmaken
+                Console.Clear();
+
+                // zeg of de ingegeven datum vroeger of later is dan vandaag
+                if(_datum.Date < ingegevenDatum.Date)
+                {
+                    Console.WriteLine("jou ingegeven datum ligt in de toekomst");
+                }
+                else if (_datum.Date > ingegevenDatum.Date)
+                {
+                    Console.WriteLine("jou ingegeven datum ligt in het verleden");
+                }
+                else
+                {
+                    Console.WriteLine("jou ingegeven datum is de dag van vandaag");
+                }
                 Console.WriteLine("\nDruk op enter om verder te gaan");
                 Console.ReadLine();
 
